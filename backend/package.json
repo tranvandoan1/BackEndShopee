@@ -6,6 +6,12 @@
   "scripts": {
     "start": "nodemon ./app.js --exec babel-node -e js"
   },
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "now-sapper"
+    }
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

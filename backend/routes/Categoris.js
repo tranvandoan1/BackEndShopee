@@ -1,6 +1,5 @@
 import express from 'express';
 import { create, list, update, categoryById, read, remove } from '../controllers/Categoris';
-import { isAdmin, isAuth, requireSignin } from './../controllers/Auth';
 const router = express.Router();
 
 
