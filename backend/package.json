@@ -35,13 +35,12 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.16.8",
-    "@babel/core": "^7.16.7",
+    "@babel/core": "^7.19.6",
     "@babel/node": "^7.16.8",
-    "@babel/preset-env": "^7.16.8"
+    "@babel/preset-env": "^7.19.4"
   },
   "postinstall": "ng build --aot --target=production",
   "engines": {
-    "npm": "8.19.2",
-    "node": "16.16.0"
+    "node": ">=8.0.0"
   }
 }
