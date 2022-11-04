@@ -51,7 +51,20 @@ const productSchema = new mongoose.Schema(
       {
         name_classify1: { type: String | null },
         name_classify2: { type: String | null },
-        value: [
+        value1: [
+          {
+            price: {
+              type: Number,
+            },
+            name: {
+              type: String,
+            },
+            quantity: {
+              type: Number,
+            },
+          },
+        ],
+        value2: [
           {
             price: {
               type: Number,
