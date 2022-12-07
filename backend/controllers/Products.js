@@ -5,7 +5,7 @@ import _, { filter } from "lodash";
 
 export const create = (req, res, next) => {
   let product = new Product(req.body);
-
+  console.log(product, "product");
   product.save((err, data) => {
     if (err) {
       res.status(400).json({

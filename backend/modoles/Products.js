@@ -20,19 +20,23 @@ const productSchema = new mongoose.Schema(
 
     view: {
       type: Number,
+      default: 0 || null,
     },
     review: {
       type: Number,
+      default: 0 || null,
     },
 
     sold: {
       type: Number,
+      default: 0 || null,
     },
     description: {
       type: String,
     },
     sale: {
       type: Number,
+      default: 0 || null,
     },
     origin: {
       type: String,
@@ -47,11 +51,11 @@ const productSchema = new mongoose.Schema(
       type: String,
     },
 
-    classification: [
-      {
-        name_classify1: { type: String | null },
-        name_classify2: { type: String | null },
-        value1: [
+    classification: {
+      name_classify1: { type: String | null },
+      name_classify2: { type: String | null },
+      value1:
+        [
           {
             price: {
               type: Number,
@@ -59,26 +63,41 @@ const productSchema = new mongoose.Schema(
             name: {
               type: String,
             },
+            photo: {
+              type: String,
+            },
+
             quantity: {
               type: Number,
             },
           },
-        ],
-        value2: [
+        ] || null,
+      value2:
+        [
           {
-            price: {
-              type: Number,
-            },
             name: {
               type: String,
             },
-            quantity: {
-              type: Number,
+            photo: {
+              type: String,
             },
+            value: [
+              {
+                price: {
+                  type: Number,
+                },
+                name: {
+                  type: String,
+                },
+                quantity: {
+                  type: Number,
+                },
+              },
+            ],
           },
-        ],
-      },
-    ],
+        ] || null,
+    },
+
     // name_commodityvalue: {
     //   type: String,
     // },
